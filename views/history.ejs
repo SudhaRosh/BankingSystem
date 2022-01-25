@@ -1,0 +1,32 @@
+
+<%- include('header') %>
+
+<div class="table-heading">
+    <h1>Transaction History</h1>
+</div>
+
+<div class="members-img" style="transform: translateY(-5rem);"></div>
+
+<div class="table-main-div">
+    <table class="table-main">
+
+        <tr>
+            <th>Sender</th>
+            <th>Receiver</th>
+            <th>Amount</th>
+            <th class="date">Date</th>
+        </tr>
+        
+        <% history.forEach(hist => { %>
+            <tr>
+                <td> <%= hist.sender %> </td>
+                <td> <%= hist.receiver %> </td>
+                <td> <%= hist.amount %> </td>
+                <td class="date"> <%= hist.date %> </td>
+            </tr>
+        <% }) %>
+    
+    </table>
+</div>
+
+<%- include('footer') %>
